@@ -50,4 +50,5 @@ if(BUILD_TESTING)
         PRIVATE test)
     target_link_libraries(UninitializedTest
         PUBLIC Uninitialized Boost::unit_test_framework)
+    add_test(UninitializedTest UninitializedTest)
 endif()
