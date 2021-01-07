@@ -29,9 +29,14 @@ function Rename-Tree {
 
 Rename-Tree -Directory .
 
-# replace the content of files
+# Replace the content of files
 Get-ChildItem . -Exclude *.ps1, *.json, *.md -Recurse -File | ForEach-Object { `
     (Get-Content $_).replace("Uninitialized", "$ProjectName") | Set-Content $_
 }
 
-Write-Output "Done!"
+# Set tasks.json runOn from 'folderOpen' to 'default'
+$file = Get-Item .\.vscode\tasks.json
+$content =  Get-Content $file 
+Set-Content $file $content.Replace('"runOn": "folderOpen"','"runOn": "default"')
+
+Write-Output "Done!" 

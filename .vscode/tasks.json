@@ -10,6 +10,9 @@
             "options": {
                 "cwd": "${workspaceFolder}"
             },
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
             "args": [
                 "-ExecutionPolicy",
                 "Bypass",

@@ -31,4 +31,10 @@ Get-ChildItem . -Exclude *.ps1, *.json, *.md -Recurse -File | ForEach-Object { `
     (Get-Content $_).replace("Initialized", "$ProjectName") | Set-Content $_
 }
 
+# Set tasks.json runOn from 'default' to 'folderOpen'
+$file = Get-Item .\.vscode\tasks.json
+$content =  Get-Content $file 
+Set-Content $file $content.Replace('"runOn": "default"','"runOn": "folderOpen"')
+
+
 Write-Output "Done!"
