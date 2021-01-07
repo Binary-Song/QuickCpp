@@ -35,7 +35,7 @@ aux_source_directory(test TEST_FILES)
 
 # ----------- Uninitialized ---------- #
  
-add_executable(Uninitialized ${SRC_FILES})
+add_library(Uninitialized ${SRC_FILES})
 target_include_directories(Uninitialized 
     PUBLIC include/Uninitialized
     PRIVATE src) 
@@ -44,10 +44,10 @@ target_include_directories(Uninitialized
 
 include(CTest)
 if(BUILD_TESTING)
-    add_executable(Uninitialized ${TEST_FILES})
-    target_include_directories(UninitializedTests
+    add_executable(UninitializedTest ${TEST_FILES})
+    target_include_directories(UninitializedTest
         PUBLIC include/Uninitialized
         PRIVATE test)
-    target_link_libraries(UninitializedTests
+    target_link_libraries(UninitializedTest
         PUBLIC Uninitialized Boost::unit_test_framework)
 endif()

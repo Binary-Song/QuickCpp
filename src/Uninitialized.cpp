@@ -1,5 +1,5 @@
-#include <iostream>
-
-int main(int, char**) {
-    std::cout << "Hello, world!\n";
+#include "Uninitialized.h"
+const char* hello()
+{
+    return "Hello world!";
 }
