@@ -4,10 +4,32 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "echo",
-            "type": "shell", 
-            "command": "echo Hello",
-            "runOptions": {" "}
+            "label": "init",
+            "type": "shell",
+            "command": "powershell",
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "shell": {
+                    "executable": "powershell"
+                }
+            },
+            "args": [
+                "-ExecutionPolicy",
+                "Bypass",
+                "-NoProfile",
+                "-File",
+                "${workspaceFolder}/scripts/init_repo.ps1",
+                "-ProjectName",
+                "${input:ProjectName}"
+            ]
         }
+    ],
+    "inputs": [
+        {
+            "id": "ProjectName",
+            "description": "Name of the project",
+            "default": "MyProject",
+            "type": "promptString"
+        },
     ]
 }
