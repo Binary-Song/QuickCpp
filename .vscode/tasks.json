@@ -18,7 +18,7 @@
                 "Bypass",
                 "-NoProfile",
                 "-File",
-                "${workspaceFolder}/scripts/init_repo.ps1",
+                "${workspaceFolder}/scripts/init.ps1",
                 "-ProjectName",
                 "${input:ProjectName}"
             ]

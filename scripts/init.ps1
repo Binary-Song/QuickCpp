@@ -5,11 +5,7 @@ param (
     $ProjectName = "Initialized"
 )
 
-Write-Output "Initializing repository..." 
-Write-Output "Project Manifest:"
-Write-Output "name: $ProjectName"
-Write-Output "use ci: $UseCI"
-Write-Output "use test: $UseTest"
+Write-Output "Initializing repository..."
  
 Get-ChildItem . -Exclude *.ps1, *.json -Recurse | ForEach-Object { `
         $new_name = $_.Name.Replace("Uninitialized", "$ProjectName")
@@ -21,3 +17,5 @@ Get-ChildItem . -Exclude *.ps1, *.json -Recurse | ForEach-Object { `
 Get-ChildItem . -Exclude *.ps1, *.json -Recurse -File | ForEach-Object { `
     (Get-Content $_).replace("Uninitialized", "$ProjectName") | Set-Content $_
 }
+
+Write-Output "Done!"
