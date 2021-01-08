@@ -39,4 +39,4 @@ $file = Get-Item .\.vscode\tasks.json
 $content =  Get-Content $file 
 Set-Content $file $content.Replace('"runOn": "folderOpen"','"runOn": "default"')
 
-Write-Output "Done!" 
+Write-Output "Done!"

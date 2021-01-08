@@ -11,7 +11,8 @@
                 "cwd": "${workspaceFolder}"
             },
             "runOptions": {
-                "runOn": "folderOpen"
+                "runOn": "folderOpen",
+                "reevaluateOnRerun": true
             },
             "args": [
                 "-ExecutionPolicy",
@@ -27,9 +28,9 @@
     "inputs": [
         {
             "id": "ProjectName",
-            "description": "Name of the project",
+            "description": "Performing Initialization: Enter Project Name",
             "default": "MyProject",
             "type": "promptString"
-        },
+        }
     ]
 }

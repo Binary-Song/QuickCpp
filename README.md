@@ -1,14 +1,23 @@
-# Lazy C++ Project Template
+# Extra Simple C++ Project Template For Extra Lazy People
 
 ## Features
 
-- Create CMake-based projects easily
+- Create CMake-based projects instantly
 
 - Boost + CTest & Github Actions CI
- 
+
+## Platform
+
+Windows
+
+## Requirements
+
+VSCode
+
+Visual Studio with C++ (MSVC compiler)
+
 ## Usage
 
-For VSCode users: execute task 'init' to init
+1. Open folder with VSCode
 
-Others: execute powershell script in root directory to init
- 
+2. Execute 'init ' task
