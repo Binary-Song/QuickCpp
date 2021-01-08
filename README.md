@@ -14,7 +14,11 @@ Windows
 
 VSCode
 
-Visual Studio with C++ (MSVC compiler)
+Visual Studio with C++ (MSVC compiler) or other compilers
+
+Boost
+
+CMake
 
 ## Usage
 
